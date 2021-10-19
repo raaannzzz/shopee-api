@@ -24,9 +24,7 @@ class ShopeeApi {
   }
 
   getBaseUrl() {
-    return `https://partner${
-      this.config.isUAT ? ".uat" : ""
-    }.shopeemobile.com/api/v1`;
+    return this.config.isUAT ? 'https://partner.test-stable.shopeemobile.com/api/v2/shop/auth_partner' : 'https://partner.shopeemobile.com/api/v2/shop/auth_partner'
   }
 
   buildAuthURL(isCancel = false) {
